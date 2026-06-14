@@ -1,4 +1,5 @@
 import { getPrimesUsingDivisors } from "./PrimesUsingDivisors.js";
+import { getPrimesUsingSieve } from "./PrimesUsingSieve.js";
 import promptSync from "prompt-sync";
 
 const prompt = promptSync();
@@ -10,7 +11,8 @@ function main () {
         n = parseInt(prompt("Please enter a positive integer (n > 0): "));
     }
     console.log(`n = ${n}`);
-    let primes = getPrimesUsingDivisors(n);
+    // let primes = getPrimesUsingDivisors(n);
+    let primes = getPrimesUsingSieve(n);
     printPrimes(primes);
 }
 
