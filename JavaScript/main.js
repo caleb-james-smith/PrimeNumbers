@@ -1,4 +1,7 @@
-const prompt = require('prompt-sync')();
+import { getPrimesUsingDivisors } from "./PrimesUsingDivisors.js";
+import promptSync from "prompt-sync";
+
+const prompt = promptSync();
 
 function main () {
     console.log("It's time to generate some prime numbers!");
@@ -7,8 +10,16 @@ function main () {
         n = parseInt(prompt("Please enter a positive integer (n > 0): "));
     }
     console.log(`n = ${n}`);
+    let primes = getPrimesUsingDivisors(n);
+    printPrimes(primes);
 }
 
-if (require.main == module) {
-    main();
+function printPrimes(primes) {
+    let num_primes = primes.length;
+    console.log(`Number of primes: ${num_primes}`);
+    if (num_primes > 0) {
+        console.log(`Primes: ${primes.join(", ")}`);
+    }
 }
+
+main();

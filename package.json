@@ -16,7 +16,7 @@
   },
   "license": "ISC",
   "author": "Caleb Smith",
-  "type": "commonjs",
+  "type": "module",
   "main": "main.js",
   "scripts": {
     "test": "node main.js"
