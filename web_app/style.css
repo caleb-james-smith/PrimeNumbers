@@ -25,3 +25,7 @@ button:hover {
     background-color: #004d99;
     transform: scale(1.05);
 }
+
+.block {
+    margin: 12px;
+}

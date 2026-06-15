@@ -10,11 +10,24 @@
   <body>
     <h1>Prime Numbers</h1>
 
-    <p>Please enter a positive integer (n > 0).</p>
-
-    <label for="number-input">Number:</label>
-    <input type="number" id="number-input">
-    <button id="run-button">Run</button>
+    <p>Please enter a positive integer (n > 0) and select a method.</p>
+    
+    <div class="block">
+      <label for="number-input">Number:</label>
+      <input type="number" id="number-input">
+    </div>
+    
+    <div class="block">
+      <label for="method-select">Method:</label>
+      <select id="method-select">
+        <option value="A">Method A</option>
+        <option value="B">Method B</option>
+      </select>
+    </div>
+    
+    <div class="block">
+      <button id="run-button">Run</button>
+    </div>
 
     <div id="output"></div>
 
