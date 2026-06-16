@@ -10,6 +10,7 @@ function updateOutput() {
     // Remove all children (nodes) of output element.
     output.replaceChildren();
 
+    // Important: For number, convert string to integer using parseInt().
     const number = parseInt(numberInput.value);
     const method = methodSelect.value;
     if (number > 0) {
