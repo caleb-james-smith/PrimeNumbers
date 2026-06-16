@@ -44,8 +44,8 @@ function getPrimes(n, method, verbose) {
 }
 
 function showPrimes(n, method, runtime_sec, primes) {
-    let text_n = `n = ${n}`;
-    addParagraph(text_n, results);
+    let text_number = `Number: ${n}`;
+    addParagraph(text_number, results);
 
     let text_method = `Method: ${method}`;
     addParagraph(text_method, results);
@@ -58,7 +58,7 @@ function showPrimes(n, method, runtime_sec, primes) {
     addParagraph(text_num_primes, results);
     
     if (num_primes > 0) {
-        let text_primes = `Primes: ${primes.join(", ")}`;
+        let text_primes = `Primes numbers: ${primes.join(", ")}`;
         addParagraph(text_primes, results);
     }
 }
