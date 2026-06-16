@@ -1,4 +1,5 @@
 export function getPrimesUsingDivisors(n) {
+    console.log(`Running getPrimesUsingDivisors with n = ${n}`);
     let verbose = false;
     const primes = [];
     if (n > 1) {
