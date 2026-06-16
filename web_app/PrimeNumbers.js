@@ -16,8 +16,14 @@ function updateOutput() {
     let verbose = false;
 
     if (number > 0) {
+        const start_time = performance.now();
         let primes = getPrimes(number, method, verbose);
-        showPrimes(number, method, primes);
+        const end_time = performance.now();
+        
+        const runtime_ms = end_time - start_time;
+        const runtime_sec = runtime_ms / 1000;
+        
+        showPrimes(number, method, runtime_sec, primes);
     }
 }
 
@@ -37,12 +43,15 @@ function getPrimes(n, method, verbose) {
     return primes;
 }
 
-function showPrimes(n, method, primes) {
+function showPrimes(n, method, runtime_sec, primes) {
     let text_n = `n = ${n}`;
     addParagraphToOutput(text_n);
 
     let text_method = `Method: ${method}`;
     addParagraphToOutput(text_method);
+
+    let text_runtime = `Runtime: ${runtime_sec.toFixed(6)} seconds`;
+    addParagraphToOutput(text_runtime);
     
     let num_primes = primes.length;
     let text_num_primes = `Number of primes: ${num_primes}`;
