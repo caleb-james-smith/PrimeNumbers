@@ -10,7 +10,7 @@ function main () {
     while (isNaN(n) || n <= 0) {
         n = parseInt(prompt("Please enter a positive integer (n > 0): "));
     }
-    console.log(`n = ${n}`);
+    console.log(`n = ${n}; typeof n = ${typeof n}`);
     // let primes = getPrimesUsingDivisors(n);
     let primes = getPrimesUsingSieve(n);
     printPrimes(primes);
