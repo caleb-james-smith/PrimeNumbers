@@ -4,11 +4,11 @@ import { getPrimesUsingSieve } from "./PrimesUsingSieve.js";
 const numberInput = document.getElementById("number-input");
 const methodSelect = document.getElementById("method-select");
 const runButton = document.getElementById("run-button");
-const output = document.getElementById("output");
+const results = document.getElementById("results");
 
-function updateOutput() {
-    // Remove all children (nodes) of output element.
-    output.replaceChildren();
+function updateResults() {
+    // Remove all children (nodes).
+    results.replaceChildren();
 
     // Important: For number, convert string to integer using parseInt().
     const number = parseInt(numberInput.value);
@@ -45,28 +45,28 @@ function getPrimes(n, method, verbose) {
 
 function showPrimes(n, method, runtime_sec, primes) {
     let text_n = `n = ${n}`;
-    addParagraphToOutput(text_n);
+    addParagraph(text_n, results);
 
     let text_method = `Method: ${method}`;
-    addParagraphToOutput(text_method);
+    addParagraph(text_method, results);
 
     let text_runtime = `Runtime: ${runtime_sec.toFixed(6)} seconds`;
-    addParagraphToOutput(text_runtime);
+    addParagraph(text_runtime, results);
     
     let num_primes = primes.length;
     let text_num_primes = `Number of primes: ${num_primes}`;
-    addParagraphToOutput(text_num_primes);
+    addParagraph(text_num_primes, results);
     
     if (num_primes > 0) {
         let text_primes = `Primes: ${primes.join(", ")}`;
-        addParagraphToOutput(text_primes);
+        addParagraph(text_primes, results);
     }
 }
 
-function addParagraphToOutput(message) {
+function addParagraph(message, element) {
     const paragraph = document.createElement("p");
     paragraph.textContent = message;
-    output.appendChild(paragraph);
+    element.appendChild(paragraph);
 }
 
-runButton.addEventListener("click", updateOutput);
+runButton.addEventListener("click", updateResults);
