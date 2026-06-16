@@ -1,6 +1,4 @@
-export function getPrimesUsingSieve(n) {
-    let verbose = true;
-    
+export function getPrimesUsingSieve(n, verbose) {
     if (verbose) {
         console.log(`Running getPrimesUsingSieve`);
         console.log(`n = ${n}; typeof n = ${typeof n}`);

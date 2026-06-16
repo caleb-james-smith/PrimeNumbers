@@ -1,6 +1,4 @@
-export function getPrimesUsingDivisors(n) {
-    let verbose = true;
-
+export function getPrimesUsingDivisors(n, verbose) {
     if (verbose) {
         console.log(`Running getPrimesUsingDivisors`);
         console.log(`n = ${n}; typeof n = ${typeof n}`);

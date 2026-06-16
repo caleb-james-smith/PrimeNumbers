@@ -13,20 +13,22 @@ function updateOutput() {
     // Important: For number, convert string to integer using parseInt().
     const number = parseInt(numberInput.value);
     const method = methodSelect.value;
+    let verbose = false;
+
     if (number > 0) {
-        let primes = getPrimes(number, method);
+        let primes = getPrimes(number, method, verbose);
         showPrimes(number, method, primes);
     }
 }
 
-function getPrimes(n, method) {
+function getPrimes(n, method, verbose) {
     let primes = []
     switch(method) {
         case "divisors":
-            primes = getPrimesUsingDivisors(n);
+            primes = getPrimesUsingDivisors(n, verbose);
             break;
         case "sieve":
-            primes = getPrimesUsingSieve(n);
+            primes = getPrimesUsingSieve(n, verbose);
             break;
         default:
             primes = [];
