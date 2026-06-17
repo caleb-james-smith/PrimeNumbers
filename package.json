@@ -1,0 +1,27 @@
+{
+  "name": "primenumbers",
+  "version": "1.0.0",
+  "description": "Prime number generator.",
+  "keywords": [
+    "prime",
+    "numbers"
+  ],
+  "homepage": "https://github.com/caleb-james-smith/PrimeNumbers#readme",
+  "bugs": {
+    "url": "https://github.com/caleb-james-smith/PrimeNumbers/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caleb-james-smith/PrimeNumbers.git"
+  },
+  "license": "ISC",
+  "author": "Caleb Smith",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "test": "node main.js"
+  },
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Numbers</title>
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <h1>Prime Numbers</h1>
+
+    <p>Please enter a positive integer (n > 0) and select a method.</p>
+    
+    <div class="block">
+      <label for="number-input">Number:</label>
+      <input type="number" id="number-input">
+    </div>
+    
+    <div class="block">
+      <label for="method-select">Method:</label>
+      <select id="method-select">
+        <option value="divisors">Number of divisors</option>
+        <option value="sieve">Sieve of Eratosthenes</option>
+      </select>
+    </div>
+    
+    <div class="block">
+      <button id="run-button">Run</button>
+    </div>
+
+    <div id="results"></div>
+
+    <script type="module" src="./PrimeNumbers.js"></script>
+  </body>
+</html>
